@@ -1,0 +1,349 @@
+/* =========================================
+   EVENTS PAGE
+========================================= */
+
+/* Hero */
+
+.events-hero{
+    height:50vh;
+    margin-top:80px;
+    background:url("../images/gallery/gallery6.jpg") center center/cover no-repeat;
+}
+
+.events-hero .overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.65);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.events-hero .hero-content{
+    text-align:center;
+    color:#fff;
+    width:90%;
+}
+
+.events-hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.events-hero p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+}
+
+/* ==========================
+INTRO
+========================== */
+
+.events-intro{
+    padding:80px 5%;
+    text-align:center;
+}
+
+.events-intro h2{
+    color:#9b1c1c;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.events-intro p{
+    max-width:850px;
+    margin:auto;
+    color:#666;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* ==========================
+EVENT CARDS
+========================== */
+
+.event-services{
+    padding:20px 5% 90px;
+}
+
+.event-services .container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.event-card{
+
+    background:#fff;
+    border-radius:18px;
+    padding:40px 30px;
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.event-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.event-card i{
+
+    font-size:55px;
+    color:#b8860b;
+    margin-bottom:20px;
+}
+
+.event-card h3{
+
+    color:#9b1c1c;
+    margin-bottom:15px;
+}
+
+.event-card p{
+
+    color:#666;
+}
+
+/* ==========================
+PACKAGES
+========================== */
+
+.packages{
+
+    background:#f8f8f8;
+    padding:90px 5%;
+}
+
+.packages h2{
+
+    text-align:center;
+    color:#9b1c1c;
+    font-size:42px;
+    margin-bottom:60px;
+}
+
+.package-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
+}
+
+.package{
+
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s;
+}
+
+.package:hover{
+
+    transform:translateY(-10px);
+}
+
+.package h3{
+
+    color:#9b1c1c;
+    margin-bottom:10px;
+}
+
+.package h4{
+
+    color:#b8860b;
+    margin-bottom:25px;
+    font-size:24px;
+}
+
+.package ul{
+
+    list-style:none;
+}
+
+.package ul li{
+
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+    color:#555;
+}
+
+.package ul li:last-child{
+
+    border:none;
+}
+
+.featured{
+
+    background:#9b1c1c;
+    color:#fff;
+    transform:scale(1.05);
+}
+
+.featured h3,
+.featured h4,
+.featured li{
+
+    color:#fff;
+}
+
+.featured ul li{
+
+    border-color:rgba(255,255,255,.2);
+}
+
+/* ==========================
+WHY EVENTS
+========================== */
+
+.why-events{
+
+    padding:90px 5%;
+}
+
+.why-events h2{
+
+    text-align:center;
+    color:#9b1c1c;
+    margin-bottom:60px;
+    font-size:42px;
+}
+
+.why-events .features{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.why-events .features div{
+
+    background:#fff;
+    text-align:center;
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.why-events .features div:hover{
+
+    transform:translateY(-8px);
+}
+
+.why-events i{
+
+    font-size:50px;
+    color:#b8860b;
+    margin-bottom:20px;
+}
+
+.why-events h3{
+
+    color:#9b1c1c;
+}
+
+/* ==========================
+ANIMATIONS
+========================== */
+
+.event-card,
+.package,
+.why-events .features div{
+
+    animation:fadeEvent .8s ease;
+}
+
+@keyframes fadeEvent{
+
+    from{
+
+        opacity:0;
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+.events-hero h1{
+
+    font-size:48px;
+}
+
+.package-grid{
+
+    grid-template-columns:1fr;
+}
+
+.featured{
+
+    transform:none;
+}
+
+}
+
+@media(max-width:768px){
+
+.events-hero{
+
+    height:40vh;
+}
+
+.events-hero h1{
+
+    font-size:36px;
+}
+
+.events-hero p{
+
+    font-size:17px;
+}
+
+.events-intro h2,
+.packages h2,
+.why-events h2{
+
+    font-size:32px;
+}
+
+}
+
+@media(max-width:500px){
+
+.event-card,
+.package{
+
+    padding:30px;
+}
+
+.event-card i{
+
+    font-size:45px;
+}
+
+}

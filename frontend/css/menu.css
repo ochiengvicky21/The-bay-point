@@ -1,0 +1,307 @@
+/* =====================================
+   MENU PAGE
+===================================== */
+
+/* Hero */
+
+.menu-hero {
+  height: 50vh;
+  margin-top: 80px;
+  background: url("../images/hero.jpg") center center/cover no-repeat;
+}
+
+.menu-hero .overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .65);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-hero .hero-content {
+  text-align: center;
+  color: #fff;
+}
+
+.menu-hero h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.menu-hero p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ==========================
+FILTER BUTTONS
+========================== */
+
+.menu-filter {
+  padding: 60px 5% 30px;
+  text-align: center;
+}
+
+.filter-btn {
+  
+  border: none;
+  background: #ffffff;
+  color: #444;
+  padding: 14px 28px;
+  margin: 10px;
+  border-radius: 40
+      cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.35s;
+    box-shadow:0 5px 15px rgba(0, 0, 0, .08);
+    }
+    
+    .filter-btn:hover,
+    .filter-btn.active {
+      
+      background: #9b1c1c;
+      color: #fff;
+    }
+    
+    /* ==========================
+MENU GRID
+========================== */
+    
+    .menu-items {
+      
+      padding: 30px 5% 90px;
+    }
+    
+    .menu-items .container {
+      
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 35px;
+    }
+    
+    .menu-card {
+      
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+      transition: .4s;
+    }
+    
+    .menu-card:hover {
+      
+      transform: translateY(-10px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+    }
+    
+    .menu-card img {
+      
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      transition: .5s;
+    }
+    
+    .menu-card:hover img {
+      
+      transform: scale(1.08);
+    }
+    
+    .details {
+      
+      padding: 25px;
+    }
+    
+    .details h3 {
+      
+      color: #9b1c1c;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+    
+    .details p {
+      
+      color: #666;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+    
+    .details span {
+      
+      display: inline-block;
+      background: #b8860b;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+    
+    /* ==========================
+CHEF SPECIALS
+========================== */
+    
+    .specials {
+      
+      background: #f7f7f7;
+      padding: 90px 5%;
+    }
+    
+    .specials h2 {
+      
+      text-align: center;
+      color: #9b1c1c;
+      font-size: 42px;
+      margin-bottom: 55px;
+    }
+    
+    .specials .cards {
+      
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .special-card {
+      
+      background: #fff;
+      padding: 40px;
+      border-radius: 18px;
+      text-align: center;
+      transition: .35s;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+      border-top: 5px solid #b8860b;
+    }
+    
+    .special-card:hover {
+      
+      transform: translateY(-8px);
+    }
+    
+    .special-card h3 {
+      
+      color: #9b1c1c;
+      margin-bottom: 18px;
+      font-size: 28px;
+    }
+    
+    .special-card p {
+      
+      color: #666;
+      margin-bottom: 20px;
+    }
+    
+    .special-card h4 {
+      
+      color: #b8860b;
+      font-size: 30px;
+    }
+    
+    /* ==========================
+MENU ANIMATIONS
+========================== */
+    
+    .menu-card,
+    .special-card {
+      
+      animation: fadeMenu .8s ease;
+    }
+    
+    @keyframes fadeMenu {
+      
+      from {
+        
+        opacity: 0;
+        transform: translateY(50px);
+        
+      }
+      
+      to {
+        
+        opacity: 1;
+        transform: translateY(0);
+        
+      }
+      
+    }
+    
+    /* ==========================
+RESPONSIVE
+========================== */
+    
+    @media(max-width:992px) {
+      
+      .menu-hero h1 {
+        
+        font-size: 46px;
+      }
+      
+      .menu-items .container {
+        
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+      
+    }
+    
+    @media(max-width:768px) {
+      
+      .menu-hero {
+        
+        height: 40vh;
+      }
+      
+      .menu-hero h1 {
+        
+        font-size: 36px;
+      }
+      
+      .menu-hero p {
+        
+        font-size: 17px;
+        width: 90%;
+      }
+      
+      .filter-btn {
+        
+        width: 170px;
+      }
+      
+      .specials h2 {
+        
+        font-size: 34px;
+      }
+      
+    }
+    
+    @media(max-width:500px) {
+      
+      .filter-btn {
+        
+        width: 100%;
+        margin: 8px 0;
+      }
+      
+      .details h3 {
+        
+        font-size: 22px;
+      }
+      
+      .special-card {
+        
+        padding: 30px;
+      }
+      
+      .special-card h3 {
+        
+        font-size: 24px;
+      }
+      
+      .special-card h4 {
+        
+        font-size: 26px;
+      }
+      
+    }
